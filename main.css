@@ -1,0 +1,387 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Space Mono', monospace;
+
+}
+
+.bill {
+    position: relative;
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bill .splitter {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 110px;
+    left: 50%;
+}
+
+.bill .bill-cal {
+    margin-left: 100px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    width: 650px;
+    height: 320px;
+    display: flex;
+    flex-direction: row;
+    /* gap: 10px; */
+    background-color: white;
+    border-radius: 15px;
+
+}
+
+.bill-cal .data-discounts {
+    padding: 20px;
+    width: 330px;
+
+
+}
+
+.data-discounts h6 {
+    margin-top: 20px;
+    margin-left: 10px;
+    color: rgb(138, 137, 137);
+}
+
+.data-discounts .input1 {
+    position: relative;
+}
+
+.data-discounts .input1 .d {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 10px;
+    height: 12px;
+}
+
+.data-discounts .input1 input {
+    margin-top: 5px;
+    margin-left: 7px;
+    width: 270px;
+    border-radius: 3px;
+    height: 35px;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 24px;
+    text-align: right;
+}
+
+.data-discounts .input1 input:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+
+}
+
+.data-discounts .select {
+    margin-bottom: 5px;
+}
+
+.data-discounts .discounts button {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    font-size: 18px;
+    width: 80px;
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.data-discounts .discounts button:hover {
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+
+.data-discounts .discounts input {
+    width: 100px;
+    font-size: 16px;
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 700;
+    margin-left: 5px;
+    height: 30px;
+    background-color: hsl(189, 41%, 97%);
+    outline: none;
+    text-align: right;
+    color: hsl(183, 100%, 15%);
+
+}
+
+.data-discounts .discounts input:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+.data-discounts .discounts input::placeholder {
+    color: hsl(186, 14%, 43%);
+
+}
+
+.data-discounts .discounts button.pressed {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.data-discounts .input2 {
+    position: relative;
+}
+
+.input2 img {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 10px;
+    height: 12px;
+}
+
+.data-discounts .input2 input {
+    margin-top: 5px;
+    margin-left: 7px;
+    width: 270px;
+    border-radius: 3px;
+    height: 35px;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 24px;
+    text-align: right;
+}
+
+.data-discounts .input2 input:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+
+}
+
+.data-discounts .input2 .peopleinput.error {
+    border: 2px solid rgba(187, 38, 38, 0.568);
+}
+
+.data-discounts .input2 .err {
+    position: absolute;
+    top: -16px;
+    left: 200px;
+    font-size: 10px;
+    color: rgba(187, 38, 38, 0.568);
+    display: none;
+
+}
+
+.bill-screen {
+    position: relative;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    height: 280px;
+    width: 300px;
+}
+
+.bill-screen p {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.907);
+    margin-bottom: 40px;
+}
+
+.bill-screen p span {
+    display: block;
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.56);
+}
+
+.bill-screen .tip-amount {
+    position: absolute;
+    top: 30px;
+    left: 165px;
+    color: hsl(172, 67%, 45%);
+    font-size: 32px;
+}
+
+.bill-screen .total {
+    position: absolute;
+    top: 96px;
+    left: 150px;
+    color: hsl(172, 67%, 45%);
+    font-size: 32px;
+}
+
+.bill-screen .reset {
+    margin-top: 50px;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-size: 12px;
+    text-transform: uppercase;
+    width: 240px;
+    padding: 10px;
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.bill-screen .reset:hover {
+    background-color: hsl(185, 41%, 84%);
+}
+
+@media (max-width:768px) {
+    body {
+        width: 375px;
+    }
+
+    .bill {
+        position: relative;
+        background-color: hsl(185, 41%, 84%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bill .splitter {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        top: 40px;
+        left: 40%;
+    }
+
+    .bill .bill-cal {
+        margin-top: 150px;
+        margin-bottom: 150px;
+        width: 370px;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        background-color: white;
+        border-radius: 15px;
+        margin-left: 0px;
+
+    }
+
+    .bill-cal .data-discounts {
+        width: 350px;
+    }
+
+    .data-discounts h6 {
+        margin-top: 20px;
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+
+    .data-discounts .input1 .d {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        width: 14px;
+        height: 16px;
+    }
+
+    .data-discounts .input1 input {
+        margin-top: 5px;
+        margin-left: 15px;
+        width: 300px;
+        height: 45px;
+        font-size: 26px;
+    }
+
+    .data-discounts .select {
+        margin-bottom: 10px;
+    }
+
+    .data-discounts .discounts button {
+        font-size: 24px;
+        width: 140px;
+        height: 45px;
+    }
+
+    .data-discounts .discounts .custom {
+        width: 140px;
+        font-size: 24px;
+        margin-left: 5px;
+        height: 45px;
+        background-color: hsl(189, 41%, 97%);
+        text-align: center;
+    }
+
+    .input2 img {
+        position: absolute;
+        top: 16px;
+        left: 30px;
+        width: 14px;
+        height: 16px;
+    }
+
+    .data-discounts .input2 input {
+        margin-top: 5px;
+        margin-left: 15px;
+        width: 300px;
+        height: 45px;
+        font-weight: 700;
+        font-size: 24px;
+        text-align: right;
+    }
+
+    .bill-screen {
+        margin-right: 10px;
+        margin-left: 10px;
+        height: 280px;
+        width: 340px;
+    }
+
+    .bill-screen p {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.907);
+        margin-bottom: 40px;
+    }
+
+    .bill-screen p span {
+        display: block;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.56);
+    }
+
+    .bill-screen .tip-amount {
+        left: 200px;
+        color: hsl(172, 67%, 45%);
+        font-size: 32px;
+    }
+
+    .bill-screen .total {
+        left: 180px;
+    }
+
+    .bill-screen .reset {
+        margin-top: 10px;
+        background-color: hsl(172, 67%, 45%);
+        color: hsl(183, 100%, 15%);
+        font-size: 20px;
+        text-transform: uppercase;
+        width: 280px;
+        height: 50px;
+        padding: 10px;
+        border: none;
+        font-weight: 700;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

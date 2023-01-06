@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div class="bill">
+  <img class="splitter" src="images/logo.svg" alt="">
+  <div class="bill-cal">
+    <div class="data-discounts">
+      <h6>  Bill</h6>
+<div class="input1">
+  <img class="d" src="images/icon-dollar.svg" alt="">
+  <input type="text" class="dollars">
+</div>
+
+      <h6 class="select">  Select Tip %</h6>
+      <div class="discounts">
+        <button>  5%</button>
+        <button>  10%</button>
+        <button>  15%</button>
+        <button>  25%</button>
+        <button>  50%</button>
+        <input class="  custom" placeholder=" Custom"> </input>
+      </div>
+      <h6> Number of People</h6>
+      <div class="input2">
+        <img src="images/icon-person.svg" alt="" class="people">
+        <input class="peopleinput" type="text">
+        <span class="err">Can't be zero</span>
+      </div>
+    </div>
+    <div class="bill-screen">
+         <p>  Tip Amount
+          <span>/ person</span></p> <span class="tip-amount"></span>
+          <p>  Total
+          <span>  / person</span>
+          </p> <span class="total"></span>
+          <button class="reset">  Reset</button>
+    </div>
+  </div>
+</div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">haya</a>.
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
